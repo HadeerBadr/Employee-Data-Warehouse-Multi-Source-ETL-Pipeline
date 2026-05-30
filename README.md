@@ -274,6 +274,7 @@ GROUP BY g.Gender;
 
 ## 👤 Author
 Hadeer Badr Hassan
+
 Built as a complete end-to-end data engineering project covering data profiling, staging, and warehouse design.
 
 **Connect on LinkedIn** | **Star this repo ⭐ if it was useful**
