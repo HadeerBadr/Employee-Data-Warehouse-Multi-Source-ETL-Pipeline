@@ -177,28 +177,47 @@ This is not an academic exercise. This is the foundation of every data-driven or
 | Version Control | Git / GitHub |
 
 ---
-
 ## 🚀 Getting Started
 
+### Prerequisites
+- SQL Server (localhost\SQLEXPRESS)
+- Visual Studio / SSDT (for `.dtsx` SSIS packages)
+- SQL Server Management Studio (SSMS)
+
+### 1. Clone the repository
 ```bash
-# 1. Clone the repository
-git clone https://github.com/your-username/employee-dwh.git
-cd employee-dwh
+git clone https://github.com/HadeerBadr/Employee-Data-Warehouse-Multi-Source-ETL-Pipeline.git
+cd Employee-Data-Warehouse-Multi-Source-ETL-Pipeline
+```
 
-# 2. Set up your database
-# Run staging scripts first
-sqlcmd -S your_server -d your_db -i staging/stg_employees_csv.sql
-sqlcmd -S your_server -d your_db -i staging/stg_employees_json.sql
-sqlcmd -S your_server -d your_db -i staging/stg_employees_xml.sql
+### 2. Set up the source data
+The following source files are already included in the repo:
+- `MOCK_DATA.json` — Employee API data (JSON)
+- `MOCK_DATA.txt` / `MOCK_DATA.xlsx` / `MOCK_DATA_Excel.txt` — HR system exports
+- `dataset.xml` + `dataset.xsd` — Legacy ERP export with schema
 
-# 3. Build dimension tables
-sqlcmd -S your_server -d your_db -i warehouse/dim_employee.sql
-sqlcmd -S your_server -d your_db -i warehouse/dim_department.sql
-sqlcmd -S your_server -d your_db -i warehouse/dim_location.sql
-sqlcmd -S your_server -d your_db -i warehouse/dim_gender.sql
+### 3. Open the SSIS project
+1. Open `EmpDatawarehouse.dtproj` in **Visual Studio**
+2. Restore the connection manager using `localhost_SQLEXPRESS.DWH.conmgr`
+3. Set your SQL Server instance to `localhost\SQLEXPRESS`
 
-# 4. Build fact table
-sqlcmd -S your_server -d your_db -i warehouse/fact_employee_salary.sql
+### 4. Run the Staging layer
+Execute `STG.dtsx` first — this loads raw data from all 3 sources into the staging database:
+
+### 5. Run the Data Warehouse layer
+After staging completes, execute `DWH.dtsx` — this transforms and loads data into the star schema:
+
+### 6. Verify in SSMS
+Open SSMS and connect to `localhost\SQLEXPRESS` → database `EmpDatawarehouse`
+
+Check the tables:
+```sql
+SELECT * FROM DimEmployee;
+SELECT * FROM DimDep;
+SELECT * FROM DimlLoc;
+SELECT * FROM DIMGender;
+SELECT * FROM FactEmployeeSalary;
+```
 ```
 
 ---
