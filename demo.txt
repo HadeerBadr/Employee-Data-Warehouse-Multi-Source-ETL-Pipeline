@@ -1,0 +1,26 @@
+SUBSTRING(age,FINDSTRING(age,".",2) + 1,4) + "-" + 
+RIGHT("0" + SUBSTRING(age,FINDSTRING(age,".",1) + 1,FINDSTRING(age,".",2) - FINDSTRING(age,".",1) - 1),2) + "-" + 
+RIGHT("0" + SUBSTRING(age,1,FINDSTRING(age,".",1) - 1),2)
+
+SUBSTRING(age,FINDSTRING(age,"/",2) + 1,4) + "-" + 
+RIGHT("0" + SUBSTRING(age,FINDSTRING(age,"/",1) + 1,FINDSTRING(age,"/",2) - FINDSTRING(age,"/",1) - 1),2) + "-" + 
+RIGHT("0" + SUBSTRING(age,1,FINDSTRING(age,"/",1) - 1),2)
+
+9/17/1971 ...excel
+21.2.1997...txt  
+30.7.1988...xml
+10/8/1990...json
+
+SUBSTRING(age, FINDSTRING(age,"/",2) + 1, 4) + "-" +RIGHT("0" + SUBSTRING(age, FINDSTRING(age,"/",1) + 1, FINDSTRING(age,"/",2) - FINDSTRING(age,"/",1) - 1), 2) + "-" +RIGHT("0" + SUBSTRING(age, 1, FINDSTRING(age,"/",1) - 1), 2)
+
+SUBSTRING(age, FINDSTRING(age,".",2) + 1, 4) + "-" +RIGHT("0" + SUBSTRING(age, FINDSTRING(age,".",1) + 1, FINDSTRING(age,".",2) - FINDSTRING(age,".",1) - 1), 2) + "-" +RIGHT("0" + SUBSTRING(age, 1, FINDSTRING(age,".",1) - 1), 2)
+
+SUBSTRING(age, FINDSTRING(age,".",2) + 1, 4) + "-" +RIGHT("0" + SUBSTRING(age, FINDSTRING(age,".",1) + 1, FINDSTRING(age,".",2) - FINDSTRING(age,".",1) - 1), 2) + "-" +RIGHT("0" + SUBSTRING(age, 1, FINDSTRING(age,".",1) - 1), 2)
+
+SUBSTRING(age, FINDSTRING(age,"/",2) + 1, 4) + "-" +RIGHT("0" + SUBSTRING(age, FINDSTRING(age,"/",1) + 1, FINDSTRING(age,"/",2) - FINDSTRING(age,"/",1) - 1), 2) + "-" +RIGHT("0" + SUBSTRING(age, 1, FINDSTRING(age,"/",1) - 1), 2)
+
+SUBSTRING(age, FINDSTRING(age,"/",2) + 1, 4) + "-" +RIGHT("0" + SUBSTRING(age, FINDSTRING(age,"/",1) + 1, FINDSTRING(age,"/",2) - FINDSTRING(age,"/",1) - 1), 2) + "-" +RIGHT("0" + SUBSTRING(age, 1, FINDSTRING(age,"/",1) - 1), 2)
+
+SUBSTRING(age, FINDSTRING(age,".",2) + 1, 4) + "-" +RIGHT("0" + SUBSTRING(age, FINDSTRING(age,".",1) + 1, FINDSTRING(age,".",2) - FINDSTRING(age,".",1) - 1), 2) + "-" +RIGHT("0" + SUBSTRING(age, 1, FINDSTRING(age,".",1) - 1), 2)
+
+SUBSTRING(age, FINDSTRING(age,".",2) + 1, 4) + "-" +RIGHT("0" + SUBSTRING(age, FINDSTRING(age,".",1) + 1, FINDSTRING(age,".",2) - FINDSTRING(age,".",1) - 1), 2) + "-" +RIGHT("0" + SUBSTRING(age, 1, FINDSTRING(age,".",1) - 1), 2)
