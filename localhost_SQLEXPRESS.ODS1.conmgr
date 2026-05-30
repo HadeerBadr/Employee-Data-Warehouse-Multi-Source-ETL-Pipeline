@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost_SQLEXPRESS.ODS1"
+  DTS:DTSID="{30142459-7C66-4B6A-AA2F-AAAED444DB2B}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=ODS;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-EmpDatawarehouse-{30142459-7C66-4B6A-AA2F-AAAED444DB2B}localhost\SQLEXPRESS.ODS1;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
