@@ -218,8 +218,6 @@ SELECT * FROM DimlLoc;
 SELECT * FROM DIMGender;
 SELECT * FROM FactEmployeeSalary;
 ```
-```
-
 ---
 
 ## 📊 Sample Queries
