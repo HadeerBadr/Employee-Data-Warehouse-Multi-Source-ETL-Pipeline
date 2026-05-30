@@ -178,38 +178,6 @@ This is not an academic exercise. This is the foundation of every data-driven or
 
 ---
 
-## 📁 Project Structure
-
-```
-employee-dwh/
-│
-├── sources/
-│   ├── employees.csv          # HR system export
-│   ├── employees.json         # Employee API data
-│   ├── employees.xml          # Legacy ERP export
-│   └── dataset.xsd            # XML schema definition
-│
-├── staging/
-│   ├── stg_employees_csv.sql
-│   ├── stg_employees_json.sql
-│   └── stg_employees_xml.sql
-│
-├── warehouse/
-│   ├── dim_employee.sql
-│   ├── dim_department.sql
-│   ├── dim_location.sql
-│   ├── dim_gender.sql
-│   ├── dim_date.sql
-│   └── fact_employee_salary.sql
-│
-├── profiling/
-│   └── data_quality_report.md  # Full findings from all 3 sources
-│
-└── README.md
-```
-
----
-
 ## 🚀 Getting Started
 
 ```bash
